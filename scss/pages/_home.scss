@@ -1,0 +1,24 @@
+@use "../abstract/" as *;
+
+.bannerMustTry {
+  padding: 5rem 0;
+  background-color: $clr--secondary;
+  &__wrapper {
+    @include gridFixed(2, 1rem);
+    align-items: center;
+  }
+
+  &__left {
+    small {
+      color: $clr--primary;
+    }
+    p {
+      margin: 2rem 0;
+      max-width: 38rem;
+    }
+    h2 {
+      margin-top: 1rem;
+      inline-size: 35rem;
+    }
+  }
+}
