@@ -1527,6 +1527,7 @@ img {
 }
 .bannerMustTry__left small {
   color: #d9964a;
+  letter-spacing: 0.7rem;
 }
 .bannerMustTry__left p {
   margin: 2rem 0;
