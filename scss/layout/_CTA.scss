@@ -60,7 +60,7 @@
         cursor: pointer;
 
         &:hover {
-          background-color: darken($clr--primary, 10%);
+          background-color: $clr--dark;
         }
       }
     }

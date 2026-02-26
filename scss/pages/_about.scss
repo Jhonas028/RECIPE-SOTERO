@@ -1,0 +1,81 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+@use "../layout/" as *;
+
+.background {
+  padding: 4rem 0;
+  background-color: $clr--secondary;
+  height: 70vh;
+  position: relative;
+}
+
+.about {
+  position: relative; // <-- changed from absolute
+  margin-top: -650px; // adjust how much it overlaps the background
+
+  z-index: 2;
+  margin-bottom: 4rem;
+
+  h2 {
+    text-align: center;
+    font-family: $font-secondary;
+    padding: 2rem 0;
+  }
+  h1 {
+    font-family: $font-secondary;
+  }
+
+  img {
+    max-width: unset;
+    @include imgFit(90rem, 50rem);
+  }
+
+  &__wrapper {
+    margin-top: 4rem;
+    @include gridCustom(4fr 2fr, 4rem); // left = 3fr, right = 2fr
+    h2 {
+      text-align: left;
+      max-width: 120rem;
+    }
+    p {
+      text-align: justify;
+    }
+  }
+
+  &__right {
+    h3 {
+      text-align: left;
+      margin-bottom: 2rem;
+      font-family: $font-secondary;
+      color: $clr--primary;
+    }
+  }
+
+  &__wrapper-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__card {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+
+    img {
+      @include imgFit(150px, 190px);
+    }
+
+    .recipes__info {
+      h4 {
+        font-family: $font-secondary;
+        margin: 0.5rem 0;
+      }
+
+      .recipes__stars {
+        color: $clr--primary;
+        padding: 0.5rem 0;
+      }
+    }
+  }
+}

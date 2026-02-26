@@ -1582,7 +1582,7 @@ small {
   cursor: pointer;
 }
 .CTA__form .subscribe .btn:hover {
-  background-color: rgb(198.3561643836, 124.9315068493, 41.6438356164);
+  background-color: #666666;
 }
 
 .bannerMustTry {
@@ -1752,4 +1752,80 @@ small {
 .classicCollec__card .recipes__info .recipes__stars {
   color: #d9964a;
   padding: 1rem 0;
+}
+
+.background {
+  padding: 4rem 0;
+  background-color: #f9e9d7;
+  height: 70vh;
+  position: relative;
+}
+
+.about {
+  position: relative;
+  margin-top: -650px;
+  z-index: 2;
+  margin-bottom: 4rem;
+}
+.about h2 {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  padding: 2rem 0;
+}
+.about h1 {
+  font-family: "Playfair Display", serif;
+}
+.about img {
+  max-width: unset;
+  width: 90rem;
+  height: 50rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.about__wrapper {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+  gap: 4rem;
+}
+.about__wrapper h2 {
+  text-align: left;
+  max-width: 120rem;
+}
+.about__wrapper p {
+  text-align: justify;
+}
+.about__right h3 {
+  text-align: left;
+  margin-bottom: 2rem;
+  font-family: "Playfair Display", serif;
+  color: #d9964a;
+}
+.about__wrapper-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.about__card {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+.about__card img {
+  width: 150px;
+  height: 190px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.about__card .recipes__info h4 {
+  font-family: "Playfair Display", serif;
+  margin: 0.5rem 0;
+}
+.about__card .recipes__info .recipes__stars {
+  color: #d9964a;
+  padding: 0.5rem 0;
 }/*# sourceMappingURL=main.min.css.map */
