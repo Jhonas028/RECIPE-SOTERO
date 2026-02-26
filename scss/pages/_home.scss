@@ -4,6 +4,7 @@
 
 .bannerMustTry {
   padding: 4rem 0;
+ 
   background-color: $clr--secondary;
   &__wrapper {
     @include gridFixed(2, 1rem);
@@ -183,9 +184,11 @@
 
 
 @include mediaQuery(520px) {
+
+
 // recipe section
   .recipe {
-
+   
     &__wrapper {
       @include gridFixed(1, 2rem); // 4 → 1 column
     }

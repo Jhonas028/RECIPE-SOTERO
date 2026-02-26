@@ -1373,6 +1373,11 @@ img {
   margin: 0 auto;
   padding: 0 5rem;
 }
+@media screen and (max-width: 520px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
 
 * {
   margin: 0;
@@ -1455,7 +1460,7 @@ small {
 .header__nav ul {
   display: flex;
   align-items: center;
-  gap: 3rem;
+  gap: 2rem;
 }
 .header__nav ul li a {
   font-weight: 600;
@@ -1490,12 +1495,15 @@ small {
 }
 @media screen and (max-width: 520px) {
   .header {
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 999;
     padding: 2rem 0;
+  }
+  .header body {
+    padding-top: 6rem;
   }
   .header__nav ul {
     background-color: #dedbdb;
@@ -1504,18 +1512,24 @@ small {
     position: fixed;
     top: 0;
     right: -100%;
-    z-index: 1;
-    margin-top: 6rem;
+    z-index: 998;
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    transition: all 0.5s ease-in-out;
+    transition: right 0.5s ease-in-out;
+  }
+  .header__nav.active ul {
+    right: 0;
   }
   .header__toggle-menu {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     margin-left: auto;
-    z-index: 2;
+    z-index: 1000;
+    cursor: pointer;
   }
 }
 

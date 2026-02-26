@@ -24,10 +24,11 @@
     ul {
       display: flex;
       align-items: center;
-      gap: 3rem;
+      gap: 2rem;
 
       li {
         a {
+        
           font-weight: 600;
           color: $clr--dark;
         }
@@ -36,6 +37,8 @@
 
     &.open {
       ul {
+     
+          
         right: 0;
       }
     }
@@ -73,38 +76,50 @@
     }
   }
 
-  @include mediaQuery(520px) {
-    & {
+@include mediaQuery(520px) {
+
+  & {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    padding: 2rem 0;
+  }
+
+  body {
+    padding-top: 6rem;
+  }
+
+  &__nav {
+    ul {
+      background-color: $clr--light;
+      height: 100vh;
+      width: 100%;
       position: fixed;
       top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 999;
-      padding: 2rem 0;
-    }
-
-    &__nav {
-      ul {
-        background-color: $clr--light;
-        height: 100vh;
-        width: 100%;
-        position: fixed;
-        top: 0;
-        right: -100%;
-        z-index: 1;
-        margin-top: 6rem;
-        flex-direction: column;
-        text-align: center;
-        transition: all 0.5s ease-in-out;
-      }
-    }
-
-    &__toggle-menu {
+      right: -100%;
+      z-index: 998; // slightly lower than hamburger
       display: flex;
       flex-direction: column;
-      gap: 0.5rem;
-      margin-left: auto;
-      z-index: 2;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      transition: right 0.5s ease-in-out;
+    }
+
+    &.active ul {
+      right: 0;
     }
   }
+
+  &__toggle-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-left: auto;
+    z-index: 1000; // higher than the menu
+    cursor: pointer;
+  }
+}
 }
