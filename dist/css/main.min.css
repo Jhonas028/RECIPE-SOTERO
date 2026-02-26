@@ -1760,6 +1760,55 @@ small {
   padding: 1rem 0;
 }
 
+@media screen and (max-width: 520px) {
+  .recipe__wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+  .recipe__cards img {
+    width: 100%;
+    height: auto;
+  }
+  .recipe__cards p {
+    max-width: 100%;
+    text-align: left;
+  }
+  .collection__wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+  .collection__items .collection__wrapper:nth-child(even) {
+    direction: ltr;
+  }
+  .collection__items .collection__wrapper:nth-child(even) .collection__right {
+    text-align: left;
+  }
+  .collection__right {
+    text-align: left;
+  }
+  .collection__right p {
+    text-align: left;
+  }
+  .classicCollec__wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+    padding: 2rem 0;
+  }
+  .classicCollec__card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .classicCollec__card img {
+    width: 100%;
+    height: auto;
+  }
+  .classicCollec__card .recipes__info {
+    width: 100%;
+  }
+}
 .about {
   position: relative;
   margin-top: -650px;

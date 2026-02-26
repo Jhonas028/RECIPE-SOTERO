@@ -180,3 +180,76 @@
     }
   }
 }
+
+
+@include mediaQuery(520px) {
+// recipe section
+  .recipe {
+
+    &__wrapper {
+      @include gridFixed(1, 2rem); // 4 → 1 column
+    }
+
+    &__cards {
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      p {
+        max-width: 100%;
+        text-align: left;
+      }
+    }
+  }
+// collection section
+  .collection {
+
+    &__wrapper {
+      @include gridFixed(1, 2rem); // 2 → 1 column
+    }
+
+    &__items {
+
+      .collection__wrapper:nth-child(even) {
+        direction: ltr; // remove rtl trick on mobile
+
+        .collection__right {
+          text-align: left;
+        }
+      }
+    }
+
+    &__right {
+      text-align: left;
+
+      p {
+        text-align: left;
+      }
+    }
+  }
+// classic collection section
+
+  .classicCollec {
+
+    &__wrapper {
+      @include gridFixed(1, 1.5rem); // 3 → 1 column
+      padding: 2rem 0;
+    }
+
+    &__card {
+      flex-direction: column; // image on top
+      align-items: flex-start;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      .recipes__info {
+        width: 100%;
+      }
+    }
+  }
+
+}
