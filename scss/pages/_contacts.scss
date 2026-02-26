@@ -20,7 +20,7 @@
 
   img {
     max-width: unset;
-    @include imgFit(90rem, 50rem);
+    @include imgFit(90rem, 55rem);
   }
 
   // Wrapper for both columns

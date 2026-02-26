@@ -1847,7 +1847,7 @@ small {
 .contacts img {
   max-width: unset;
   width: 90rem;
-  height: 50rem;
+  height: 55rem;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
