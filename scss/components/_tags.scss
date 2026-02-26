@@ -1,0 +1,6 @@
+@use "../abstract/" as *;
+
+small {
+  color: $clr--primary;
+  letter-spacing: 0.7rem;
+}

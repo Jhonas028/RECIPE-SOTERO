@@ -1431,6 +1431,11 @@ img {
   }
 }
 
+small {
+  color: #d9964a;
+  letter-spacing: 0.7rem;
+}
+
 .header {
   padding: 3rem 0;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -1515,8 +1520,73 @@ img {
   }
 }
 
+.footer {
+  background-color: #f9e9d7;
+  padding: 3rem 0;
+  text-align: center;
+}
+.footer__links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.CTA {
+  padding: 6rem 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5)), url("../../images/bell_pepper.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 35rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.CTA__title h1 {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  color: #ffffff;
+}
+.CTA__title p {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  color: #ffffff;
+}
+.CTA__form {
+  margin-top: 4rem;
+}
+.CTA__form .subscribe {
+  display: flex;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+.CTA__form .subscribe input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+.CTA__form .subscribe input:focus {
+  border-color: #d9964a;
+}
+.CTA__form .subscribe .btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0 5px 5px 0;
+  border: none;
+  background-color: #d9964a;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+.CTA__form .subscribe .btn:hover {
+  background-color: rgb(198.3561643836, 124.9315068493, 41.6438356164);
+}
+
 .bannerMustTry {
-  padding: 5rem 0;
+  padding: 4rem 0;
   background-color: #f9e9d7;
 }
 .bannerMustTry__wrapper {
@@ -1525,10 +1595,6 @@ img {
   gap: 1rem;
   align-items: center;
 }
-.bannerMustTry__left small {
-  color: #d9964a;
-  letter-spacing: 0.7rem;
-}
 .bannerMustTry__left p {
   margin: 2rem 0;
   max-width: 38rem;
@@ -1536,4 +1602,154 @@ img {
 .bannerMustTry__left h2 {
   margin-top: 1rem;
   inline-size: 35rem;
+}
+@media screen and (max-width: 520px) {
+  .bannerMustTry__wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    padding: 0 1.5rem;
+  }
+  .bannerMustTry__left p {
+    max-width: 100%;
+  }
+  .bannerMustTry__left h2 {
+    inline-size: 100%;
+  }
+}
+
+.recipe {
+  padding: 4rem 0;
+}
+.recipe__title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.recipe__title h3 {
+  font-family: "Playfair Display", serif;
+  color: #d9964a;
+}
+.recipe__title::before, .recipe__title::after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  background-color: #d9964a;
+}
+.recipe__wrapper {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0rem;
+}
+.recipe__cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.recipe__cards img {
+  width: 340px;
+  height: 470px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.recipe__cards p {
+  margin-top: 2rem;
+  text-align: justify;
+  max-width: 300px;
+}
+.recipe__cardTitle {
+  text-align: center;
+}
+.recipe__cardTitle small {
+  margin-top: 2rem;
+  display: block;
+}
+.recipe__cardTitle p {
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.collection {
+  padding: 4rem 0;
+}
+.collection__title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.collection__title h3 {
+  font-family: "Playfair Display", serif;
+  color: #d9964a;
+}
+.collection__title::after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  background-color: #d9964a;
+}
+.collection__wrapper {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  align-items: center;
+}
+.collection__right h3 {
+  margin-top: 1rem;
+}
+.collection__right p {
+  margin-top: 1rem;
+  text-align: justify;
+}
+.collection__right a {
+  margin-top: 2rem;
+}
+.collection__items .collection__wrapper:nth-child(even) {
+  direction: rtl;
+}
+.collection__items .collection__wrapper:nth-child(even) .collection__right {
+  direction: ltr;
+  text-align: left;
+}
+
+.classicCollec {
+  padding: 4rem 0;
+  display: flex;
+}
+.classicCollec__wrapper {
+  padding: 4rem 0;
+  display: grid;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1fr;
+  gap: 2rem;
+}
+.classicCollec__card {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.classicCollec__card img {
+  width: 150px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  object-fit: cover;
+}
+.classicCollec__card .recipes__info h4 {
+  font-family: "Playfair Display", serif;
+  font-weight: bolder;
+  margin: 0.3rem 0;
+  padding: 0.5 0;
+}
+.classicCollec__card .recipes__info .recipes__stars {
+  color: #d9964a;
+  padding: 1rem 0;
 }/*# sourceMappingURL=main.min.css.map */

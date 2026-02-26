@@ -1,7 +1,9 @@
 @use "../abstract/" as *;
+@use "../base/" as *;
+@use "../layout/" as *;
 
 .bannerMustTry {
-  padding: 5rem 0;
+  padding: 4rem 0;
   background-color: $clr--secondary;
   &__wrapper {
     @include gridFixed(2, 1rem);
@@ -9,10 +11,6 @@
   }
 
   &__left {
-    small {
-      color: $clr--primary;
-      letter-spacing: 0.7rem;
-    }
     p {
       margin: 2rem 0;
       max-width: 38rem;
@@ -20,6 +18,165 @@
     h2 {
       margin-top: 1rem;
       inline-size: 35rem;
+    }
+  }
+
+  @include mediaQuery(520px) {
+    &__wrapper {
+      @include gridFixed(1, 1rem);
+      padding: 0 1.5rem;
+    }
+    &__left {
+      p {
+        max-width: 100%;
+      }
+      h2 {
+        inline-size: 100%;
+      }
+    }
+  }
+}
+
+.recipe {
+  padding: 4rem 0;
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    h3 {
+      font-family: $font-secondary;
+      color: $clr--primary;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      flex: 1;
+      height: 2px;
+      background-color: $clr--primary;
+    }
+  }
+
+  &__wrapper {
+    margin-top: 4rem;
+    @include gridFixed(4, 0rem);
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      @include imgFit(340px, 470px);
+    }
+
+    p {
+      margin-top: 2rem;
+      text-align: justify;
+      max-width: 300px;
+    }
+  }
+  &__cardTitle {
+    text-align: center;
+    small {
+      margin-top: 2rem;
+      display: block;
+    }
+    p {
+      font-family: $font-secondary;
+      text-align: center;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+  }
+}
+
+.collection {
+  padding: 4rem 0;
+
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    h3 {
+      font-family: $font-secondary;
+      color: $clr--primary;
+    }
+
+    &::after {
+      content: "";
+      flex: 1;
+      height: 2px;
+      background-color: $clr--primary;
+    }
+  }
+
+  &__wrapper {
+    margin-top: 4rem;
+    @include gridFixed(2, 3rem);
+    align-items: center;
+  }
+
+  &__right {
+    h3 {
+      margin-top: 1rem;
+    }
+    p {
+      margin-top: 1rem;
+      text-align: justify;
+    }
+    a {
+      margin-top: 2rem;
+    }
+  }
+  &__items {
+    .collection__wrapper:nth-child(even) {
+      direction: rtl;
+
+      .collection__right {
+        direction: ltr;
+        text-align: left;
+      }
+    }
+  }
+}
+
+.classicCollec {
+  padding: 4rem 0;
+  display: flex;
+
+  &__wrapper {
+    padding: 4rem 0;
+    display: grid;
+    @include gridFixed(3, 1fr);
+    gap: 2rem;
+  }
+
+  &__card {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    img {
+      @include imgFit(150px, 200px);
+      object-fit: cover;
+    }
+
+    .recipes__info {
+      h4 {
+        font-family: $font-secondary;
+        font-weight: bolder;
+        margin: 0.3rem 0;
+        padding: 0.5 0;
+      }
+
+      .recipes__stars {
+        color: $clr--primary;
+        padding: 1rem 0;
+      }
     }
   }
 }
