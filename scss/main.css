@@ -1388,6 +1388,7 @@ img {
   background-color: transparent;
   border: 1px solid transparent;
   font-size: 1rem;
+  text-transform: uppercase;
   transition: 0.5s ease;
 }
 .btn.btn--light {
@@ -1864,45 +1865,38 @@ small {
   flex-direction: column;
   align-items: flex-start;
 }
-.contacts__right {
+.contacts__right-wrapper {
   height: 470px;
   margin-left: 2rem;
-  padding: 2rem;
   background-color: #d9964a;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin-top: 8rem;
+  padding: 1rem;
 }
-.contacts__info {
-  width: 100%;
-  max-width: 400px;
-}
-.contacts__info h3 {
+.contacts__right-wrapper h4 {
+  text-align: left;
   font-family: "Playfair Display", serif;
   color: #dedbdb;
   margin-bottom: 2rem;
 }
-.contacts__item {
-  margin-bottom: 2rem;
-}
-.contacts__label {
-  display: block;
+.contacts__right-wrapper p {
   color: #dedbdb;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
 }
-.contacts__row {
+.contacts__right-wrapper .contacts__mpa {
   display: flex;
-  align-items: flex-start;
-  gap: 0.75rem;
+  align-items: center;
+  gap: 0.5rem;
   color: #dedbdb;
-  line-height: 1.5;
+  margin-bottom: 3rem;
 }
-.contacts__row i {
-  margin-top: 4px;
+.contacts__right-wrapper .contact__info {
+  padding: 2rem 2rem;
 }
-.contacts__row--address {
-  max-width: 320px;
+.contacts__right-wrapper #address {
+  max-width: 300px;
+  width: 70%;
 }
 
 .card {
@@ -1937,4 +1931,4 @@ small {
   background-color: #d9964a;
   color: #dedbdb;
   cursor: pointer;
-}/*# sourceMappingURL=main.min.css.map */
+}/*# sourceMappingURL=main.css.map */
