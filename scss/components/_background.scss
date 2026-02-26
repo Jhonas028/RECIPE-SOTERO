@@ -1,0 +1,12 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+@use "../layout/" as *;
+
+.background {
+  padding: 4rem 0;
+  background-color: $clr--secondary;
+  height: 70vh;
+  position: relative;
+}
+
+

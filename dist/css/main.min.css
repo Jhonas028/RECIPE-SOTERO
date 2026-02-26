@@ -1585,6 +1585,13 @@ small {
   background-color: #666666;
 }
 
+.background {
+  padding: 4rem 0;
+  background-color: #f9e9d7;
+  height: 70vh;
+  position: relative;
+}
+
 .bannerMustTry {
   padding: 4rem 0;
   background-color: #f9e9d7;
@@ -1754,13 +1761,6 @@ small {
   padding: 1rem 0;
 }
 
-.background {
-  padding: 4rem 0;
-  background-color: #f9e9d7;
-  height: 70vh;
-  position: relative;
-}
-
 .about {
   position: relative;
   margin-top: -650px;
@@ -1778,7 +1778,7 @@ small {
 .about img {
   max-width: unset;
   width: 90rem;
-  height: 50rem;
+  height: 55rem;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -1828,4 +1828,103 @@ small {
 .about__card .recipes__info .recipes__stars {
   color: #d9964a;
   padding: 0.5rem 0;
+}
+
+.contacts {
+  position: relative;
+  margin-top: -650px;
+  z-index: 2;
+  margin-bottom: 4rem;
+}
+.contacts h2 {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  padding: 2rem 0;
+}
+.contacts h1 {
+  font-family: "Playfair Display", serif;
+}
+.contacts img {
+  max-width: unset;
+  width: 90rem;
+  height: 50rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.contacts__wrapper {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+  gap: 4rem;
+  text-align: left;
+}
+.contacts__left-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.contacts__right-wrapper {
+  height: 470px;
+  margin-left: 2rem;
+  background-color: #d9964a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.contacts__right-wrapper h4 {
+  text-align: left;
+  font-family: "Playfair Display", serif;
+  color: #dedbdb;
+  margin-bottom: 2rem;
+}
+.contacts__right-wrapper p {
+  color: #dedbdb;
+}
+.contacts__right-wrapper .contacts__mpa {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #dedbdb;
+  margin-bottom: 3rem;
+}
+.contacts__right-wrapper .contact__info {
+  padding: 2rem 2rem;
+}
+
+.card {
+  margin: 0;
+  width: 100%;
+  margin-top: 4rem;
+}
+.card .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+.card .form-group label {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+.card .form-group input,
+.card .form-group textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.card .form-group textarea {
+  resize: vertical;
+  min-height: 250px;
+}
+.card .btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #d9964a;
+  color: #dedbdb;
+  cursor: pointer;
 }/*# sourceMappingURL=main.min.css.map */
