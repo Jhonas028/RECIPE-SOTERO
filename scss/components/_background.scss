@@ -7,6 +7,9 @@
   background-color: $clr--secondary;
   height: 70vh;
   position: relative;
+  @include mediaQuery(520px) {
+  height: 50vh;
+}
 }
 
 

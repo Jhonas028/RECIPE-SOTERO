@@ -190,7 +190,7 @@
   .recipe {
    
     &__wrapper {
-      @include gridFixed(1, 2rem); // 4 → 1 column
+      @include gridFixed(1, 2rem);
     }
 
     &__cards {
@@ -209,13 +209,13 @@
   .collection {
 
     &__wrapper {
-      @include gridFixed(1, 2rem); // 2 → 1 column
+      @include gridFixed(1, 2rem);
     }
 
     &__items {
 
       .collection__wrapper:nth-child(even) {
-        direction: ltr; // remove rtl trick on mobile
+        direction: ltr;
 
         .collection__right {
           text-align: left;
@@ -236,12 +236,12 @@
   .classicCollec {
 
     &__wrapper {
-      @include gridFixed(1, 1.5rem); // 3 → 1 column
+      @include gridFixed(1, 1.5rem);
       padding: 2rem 0;
     }
 
     &__card {
-      flex-direction: column; // image on top
+      flex-direction: column;
       align-items: flex-start;
 
       img {
