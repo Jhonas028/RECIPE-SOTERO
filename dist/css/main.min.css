@@ -2194,6 +2194,11 @@ small {
 .recipeMain {
   padding: 4rem 0;
 }
+.recipeMain__wrapper {
+  position: relative;
+  margin-top: -680px;
+  z-index: 2;
+}
 .recipeMain__intro--first {
   display: flex;
   justify-content: space-between;
@@ -2215,25 +2220,20 @@ small {
 .recipeMain__line {
   display: block;
   width: 100%;
-  height: 2px;
+  height: 1px;
   background-color: #666666;
   margin: 2rem 0;
-}
-.recipeMain__wrapper {
-  position: relative;
-  margin-top: -680px;
-  z-index: 2;
 }
 .recipeMain__imageWrapper {
   padding: 0 1rem;
   display: grid;
-  grid-template-columns: 3fr 2fr;
+  grid-template-columns: 4fr 2fr;
   gap: 2rem;
   align-items: stretch;
 }
 .recipeMain__imageWrapper--left img {
   width: 100%;
-  height: 90%;
+  height: 95%;
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
@@ -2241,7 +2241,8 @@ small {
 .recipeMain__imageWrapper--right {
   background-color: #d9964a;
   color: #dedbdb;
-  height: 90%;
+  width: 95%;
+  height: 95%;
   padding-top: 4rem;
   display: flex;
   flex-direction: column;
@@ -2257,13 +2258,6 @@ small {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-.recipeMain__youtube {
-  margin-top: 4rem;
-}
-.recipeMain__youtube h3 {
-  color: #d9964a;
-  font-family: "Playfair Display", serif;
 }
 .recipeMain__infos {
   position: relative;
@@ -2330,6 +2324,13 @@ small {
 .recipeMain__infos__card .recipes__info .recipes__stars {
   color: #d9964a;
   padding: 0.5rem 0;
+}
+.recipeMain__youtube {
+  margin-top: 4rem;
+}
+.recipeMain__youtube h3 {
+  color: #d9964a;
+  font-family: "Playfair Display", serif;
 }
 
 @media screen and (max-width: 520px) {
