@@ -46,3 +46,23 @@
     gap: 1rem;
   }
 }
+
+//anchors
+.tag {
+  display: inline-block;
+  background-color: $clr--dark;
+  color: $clr--light;
+  font-size: 0.8rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  margin-left: 0.3rem;
+}
+
+.tag:hover {
+  background-color: $clr--primary;
+  color: $clr--light;
+  font-size: 0.8rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  margin-left: 0.3rem;
+}

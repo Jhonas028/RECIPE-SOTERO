@@ -37,55 +37,54 @@
     align-items: flex-start;
   }
 
-// Right Column
-&__right {
-  height: 470px;
-  margin-left: 2rem;
-  padding: 2rem;
-  background-color: $clr--primary;
-  display: flex;
-  align-items: center;
+  // Right Column
+  &__right {
+    height: 470px;
+    margin-left: 2rem;
+    padding: 2rem;
+    background-color: $clr--primary;
+    display: flex;
+    align-items: center;
     margin-top: 8rem;
-}
+  }
 
-&__info {
-  width: 100%;
-  max-width: 400px;
+  &__info {
+    width: 100%;
+    max-width: 400px;
+  }
 
-}
+  &__info h3 {
+    font-family: $font-secondary;
+    color: $clr--light;
+    margin-bottom: 2rem;
+  }
 
-&__info h3 {
-  font-family: $font-secondary;
-  color: $clr--light;
-  margin-bottom: 2rem;
-}
+  &__item {
+    margin-bottom: 2rem;
+  }
 
-&__item {
-  margin-bottom: 2rem;
-}
+  &__label {
+    display: block;
+    color: $clr--light;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
 
-&__label {
-  display: block;
-  color: $clr--light;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
+  &__row {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    color: $clr--light;
+    line-height: 1.5;
+  }
 
-&__row {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.75rem;
-  color: $clr--light;
-  line-height: 1.5;
-}
+  &__row i {
+    margin-top: 4px; // aligns icon nicely with text
+  }
 
-&__row i {
-  margin-top: 4px; // aligns icon nicely with text
-}
-
-&__row--address {
-  max-width: 320px;
-}
+  &__row--address {
+    max-width: 320px;
+  }
 }
 
 .card {
@@ -126,7 +125,6 @@
   }
 }
 
-
 @include mediaQuery(520px) {
   .contacts {
     margin-top: -350px;
@@ -151,7 +149,7 @@
 
     &__wrapper {
       display: flex;
-      flex-direction: column; 
+      flex-direction: column;
       gap: 2rem;
       margin-top: 2rem;
       text-align: center;
@@ -199,7 +197,7 @@
       line-height: 1.4;
 
       i {
-        margin-top: 0; 
+        margin-top: 0;
       }
     }
 

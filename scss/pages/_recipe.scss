@@ -1,0 +1,310 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+@use "../layout/" as *;
+
+.recipeMain {
+  padding: 4rem 0;
+
+  &__intro {
+    &--first {
+      @include between;
+      align-items: flex-end;
+      width: 100%;
+
+      h3 {
+        font-family: $font-secondary;
+        max-width: 25rem;
+      }
+    }
+
+    &--second {
+      @include between;
+      align-items: flex-end;
+      width: 100%;
+    }
+  }
+
+  &__line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: $clr--dark;
+    margin: 2rem 0;
+  }
+
+  &__wrapper {
+    position: relative;
+    margin-top: -680px; // overlaps the background
+    z-index: 2;
+  }
+
+  &__imageWrapper {
+    padding: 0 1rem;
+    @include gridCustom(3fr 2fr, 2rem);
+    align-items: stretch;
+
+    &--left {
+      img {
+        width: 100%;
+        height: 90%;
+        object-fit: cover;
+        display: block;
+      }
+    }
+
+    &--right {
+      background-color: $clr--primary;
+      color: $clr--light;
+      height: 90%;
+      padding-top: 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+
+      p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  &__nextPrev {
+    @include between;
+  }
+
+  &__youtube {
+    margin-top: 4rem;
+    h3 {
+      color: $clr--primary;
+      font-family: $font-secondary;
+    }
+  }
+
+  // new info
+
+  &__infos {
+    position: relative;
+    margin-top: -650px;
+    z-index: 2;
+    margin-bottom: 4rem;
+
+    h2 {
+      text-align: center;
+      font-family: $font-secondary;
+      padding: 2rem 0;
+    }
+
+    &__wrapper {
+      margin-top: 4rem;
+      @include gridCustom(4fr 2fr, 4rem);
+
+      h2 {
+        font-family: $font-secondary;
+        text-align: left;
+        max-width: 120rem;
+      }
+
+      h4 {
+        margin: 2rem 0;
+      }
+
+      p {
+        text-align: justify;
+        margin-bottom: 1rem;
+      }
+    }
+
+    &__right {
+      h3 {
+        margin-top: 2rem;
+        text-align: left;
+        margin-bottom: 2rem;
+        font-family: $font-secondary;
+        color: $clr--primary;
+      }
+
+      .recipeMain__tags {
+        max-width: 20rem;
+        margin-top: 1rem;
+      }
+    }
+
+    &__wrapper-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    &__card {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+
+      img {
+        @include imgFit(150px, 190px);
+      }
+
+      .recipes__info {
+        h4 {
+          font-family: $font-secondary;
+          margin: 0.5rem 0;
+        }
+
+        .recipes__stars {
+          color: $clr--primary;
+          padding: 0.5rem 0;
+        }
+      }
+    }
+  }
+}
+
+@include mediaQuery(520px) {
+  .recipeMain {
+    // push the section below the header
+    margin-top: 13rem;
+
+    // intro sections stacked
+    &__intro {
+      &--first,
+      &--second {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+      }
+
+      h3 {
+        max-width: 100%;
+        font-size: 1.5rem;
+      }
+    }
+
+    // lines
+    &__line {
+      margin: 1.5rem 0;
+    }
+
+    // image wrapper stacked
+    &__imageWrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+
+      &--left,
+      &--right {
+        width: 100%;
+      }
+
+      &--left {
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 0.5rem;
+        }
+      }
+
+      &--right {
+        height: auto;
+        padding-top: 1.5rem;
+
+        p {
+          font-size: 0.85rem;
+          line-height: 1.4;
+        }
+      }
+    }
+
+    // youtube section responsive
+    &__youtube {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      iframe {
+        width: 100%;
+        aspect-ratio: 16 / 9; // maintain 16:9
+        border-radius: 0.5rem;
+      }
+    }
+
+    // next/prev stacking
+    &__nextPrev {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      h4 {
+        text-align: center;
+        width: 100%;
+      }
+    }
+
+    // infos section stacking
+    &__infos {
+      &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      &__right {
+        width: 100%;
+
+        h3 {
+          text-align: center;
+          font-size: 1.2rem;
+          margin-bottom: 1rem;
+        }
+      }
+
+      &__wrapper-cards {
+        display: flex;
+        flex-direction: column; // keep wrapper column if multiple cards stacked
+        gap: 1.5rem;
+      }
+
+      &__card {
+        display: flex;
+        flex-direction: row; // side by side
+        align-items: center; // vertical alignment
+        gap: 1rem;
+
+        img {
+          width: 150px; // fixed width for image
+          height: auto;
+          border-radius: 0.5rem;
+          object-fit: cover;
+        }
+
+        .recipes__info {
+          flex: 1; // take remaining space
+          text-align: left; // align text to the left
+
+          h4 {
+            font-size: 1rem;
+          }
+
+          .recipes__stars {
+            font-size: 0.9rem;
+            padding: 0.3rem 0;
+          }
+        }
+      }
+    }
+
+    // tags section full width
+    &__tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+
+      .tag {
+        padding: 0.3rem 0.8rem;
+        font-size: 0.75rem;
+      }
+    }
+  }
+}

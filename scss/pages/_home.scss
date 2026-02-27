@@ -4,7 +4,7 @@
 
 .bannerMustTry {
   padding: 4rem 0;
- 
+
   background-color: $clr--secondary;
   &__wrapper {
     @include gridFixed(2, 1rem);
@@ -182,13 +182,9 @@
   }
 }
 
-
 @include mediaQuery(520px) {
-
-
-// recipe section
+  // recipe section
   .recipe {
-   
     &__wrapper {
       @include gridFixed(1, 2rem);
     }
@@ -205,15 +201,13 @@
       }
     }
   }
-// collection section
+  // collection section
   .collection {
-
     &__wrapper {
       @include gridFixed(1, 2rem);
     }
 
     &__items {
-
       .collection__wrapper:nth-child(even) {
         direction: ltr;
 
@@ -231,10 +225,9 @@
       }
     }
   }
-// classic collection section
+  // classic collection section
 
   .classicCollec {
-
     &__wrapper {
       @include gridFixed(1, 1.5rem);
       padding: 2rem 0;
@@ -254,5 +247,4 @@
       }
     }
   }
-
 }
